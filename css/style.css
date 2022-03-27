@@ -1,0 +1,252 @@
+                        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+                        * {
+                            box-sizing: border-box;
+                            /* pesquisar sobre*/
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        body {
+                            font-family: 'Roboto', sans-serif;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                            /*tirou a linha em baixo do link "saiba mais"*/
+                            color: inherit;
+                            /*herda a cor do parente pai, nesse caso, a nav bar */
+                        }
+                        
+                        .btn {
+                            display: inline-block;
+                            padding: 15px 60px;
+                            font-size: 1.1rem;
+                            /* o "rem" pega o tamanho padrao da fonte do html e multiplica pelo primeiro numero, no caso desse css "1" *, geralmente o tamanho padrao da fonte é 14 ou 16px */
+                            text-transform: uppercase;
+                            /* serve para o texto ficar em maisculo */
+                            background-color: #111;
+                            color: #eee;
+                            border-radius: 5px;
+                            /* serve para arredondar a borda do botao ou algo do tipo */
+                            transition: background 500ms ease;
+                            /* da um efeitinho no botao quando passa o mouse*/
+                        }
+                        
+                        .btn:hover {
+                            /* "hover" usamos quando o mouse esta sobre um elemento, no caso o botao, e ele modifica suas caracteristicas */
+                            cursor: pointer;
+                            background: #000;
+                        }
+                        
+                        .headline {
+                            font-size: 2.2rem;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            /* muda para negrito */
+                            text-align: center;
+                            padding-bottom: 50px;
+                            letter-spacing: 2px;
+                            /* separa as letras*/
+                        }
+                        /* navbar */
+                        
+                        #navbar {
+                            width: 100%;
+                            background: #111;
+                            color: #eee;
+                            height: 80px;
+                            position: fixed;
+                        }
+                        
+                        #navbar-container {
+                            width: 80%;
+                            height: 100%;
+                            margin: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        
+                        #navbar-itens {
+                            display: flex;
+                            list-style: none;
+                            /*tira as bolinhas da lista */
+                            text-transform: uppercase;
+                        }
+                        
+                        .logo {
+                            font-size: 2rem;
+                        }
+                        
+                        #navbar-itens li {
+                            padding: 10px;
+                            /* padding define uma distancia entre os elementos e suas bordas */
+                        }
+                        /* a imagem */
+                        
+                        #showcase {
+                            height: 100vh;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #eee;
+                            background: url(../img/showcase.jpg) no-repeat center center/cover;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            background-blend-mode: color;
+                            /* overlay, ele mescla uma cor ao background */
+                        }
+                        
+                        #showcase-container {
+                            text-align: center;
+                        }
+                        
+                        #showcase-container h2 {
+                            font-size: 2.5rem;
+                        }
+                        
+                        #showcase-container p {
+                            font-size: 1.2rem;
+                            padding: 7px 0;
+                        }
+                        /* clientes */
+                        
+                        #clients {
+                            height: 100%;
+                            background: #eee;
+                            color: #111;
+                            padding: 50px;
+                        }
+                        
+                        #clientes-container {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            /*A grid-template-columns esta falando que quer que ocupe 4 colunas que ocupe uma fração da minha div total*/
+                            justify-items: center;
+                            padding: 15px;
+                        }
+                        
+                        .client {
+                            display: inline-block;
+                            /* inline block pra ser considerado como um bloco, uma div, pode mudar os lados esquerdo e direito e em cima e embaixo */
+                            width: 25%;
+                        }
+                        /* About */
+                        
+                        #features {
+                            width: 100%;
+                            background: #222;
+                            color: #eee;
+                            padding: 50px;
+                        }
+                        
+                        #features-container {
+                            width: 100%;
+                            margin: auto;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-column-gap: 50px;
+                            /* cria um espaço entre uma coluna e a outra */
+                        }
+                        
+                        .feature {
+                            display: flex;
+                            flex-direction: column;
+                            background: #333;
+                            padding: 20px;
+                            border-radius: 5px;
+                            /*border-radius deixa a borda arredondada */
+                        }
+                        
+                        .feature-tille {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                        }
+                        /*product*/
+                        
+                        #product {
+                            width: 100%;
+                            padding: 50px;
+                        }
+                        
+                        #product-container {
+                            display: flex;
+                            justify-items: center;
+                            /* alinha horinzontal */
+                            align-items: center;
+                            /* alinha vertical */
+                        }
+                        
+                        #items {
+                            width: 500px;
+                            /* serve pro conteudo (no caso os textos) nao ficarem ate o fim da pagina, ficarem apenas no meinho */
+                        }
+                        
+                        #items .item {
+                            display: flex;
+                            padding: 10px;
+                            margin: 15px 0;
+                            font-size: 1.2rem;
+                        }
+                        /* o que acham de nós */
+                        
+                        .testimonial {
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.2rem;
+                            background: #333;
+                            padding: 15px;
+                            margin: 15px 0;
+                            border-radius: 5px;
+                        }
+                        
+                        #testimonials {
+                            width: 100%;
+                            background-color: #222;
+                            color: #eee;
+                            padding: 50px;
+                        }
+                        
+                        #testimonials-container {
+                            width: 80%;
+                            margin: auto;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                        
+                        .testimonial-image {
+                            height: 200px;
+                            width: auto;
+                            border-radius: 50%;
+                            margin: 15px;
+                        }
+                        /*galeria */
+                        
+                        #gallery {
+                            width: 100%;
+                            margin: auto;
+                            padding: 50px;
+                        }
+                        
+                        #gallery-container {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-gap: 30px;
+                            /* grid gap serve para dar espaço entre os itens de uma grid */
+                            justify-items: center;
+                        }
+                        
+                        .gallery-image {
+                            display: inline-block;
+                            width: 540px;
+                            height: 360px;
+                            border-radius: 5px;
+                        }
+                        /*footer*/
+                        
+                        #footer {
+                            background: #222;
+                            color: #eee;
+                            padding: 30px;
+                            text-align: center;
+                        }
